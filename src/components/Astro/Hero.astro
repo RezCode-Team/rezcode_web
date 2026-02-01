@@ -1,0 +1,70 @@
+---
+import { Layers, Zap, Binary, ArrowRight } from "lucide-react";
+---
+
+<section
+  class="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden pt-20"
+>
+  <!-- Background Elements -->
+  <div
+    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 w-[800px] h-[800px] bg-brand-primary/10 blur-[120px] rounded-full animate-float"
+    data-aos="zoom-in"
+    data-aos-delay="200"
+  >
+  </div>
+
+  <!-- Tech Grid Background -->
+  <div class="tech-grid"></div>
+
+  <!-- Floating Elements -->
+  <div
+    class="absolute top-20 left-10 md:left-20 text-brand-secondary/20 animate-float"
+    style="animation-delay: 1s;"
+  >
+    <Layers className="w-16 h-16 md:w-24 md:h-24" />
+  </div>
+  <div
+    class="absolute bottom-40 right-10 md:right-20 text-brand-primary/20 animate-float"
+    style="animation-delay: 2s;"
+  >
+    <Zap className="w-12 h-12 md:w-20 md:h-20" />
+  </div>
+  <div
+    class="absolute top-40 right-20 md:right-40 text-white/5 animate-float"
+    style="animation-delay: 3s;"
+  >
+    <Binary className="w-14 h-14 md:w-24 md:h-24" />
+  </div>
+
+  <div
+    class="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-brand-dark to-transparent -z-10"
+  >
+  </div>
+
+  <div class="text-center max-w-5xl z-10">
+    <div
+      data-aos="fade-down"
+      class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-primary/30 bg-brand-primary/10 text-brand-secondary text-xs font-bold uppercase tracking-widest mb-8 hover:bg-brand-primary/20 transition-colors cursor-default"
+    >
+      <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
+      Next-Gen Software Agency
+    </div>
+
+    <h1
+      data-aos="fade-up"
+      <h1
+      class="text-4xl md:text-7xl font-black mb-6 leading-tight text-white"
+      data-aos="fade-up"
+    >
+      Architecting the <span class="text-brand-primary">Digital Future</span>
+    </h1>
+    <p
+      class="text-lg md:text-xl text-brand-secondary mb-8 max-w-2xl mx-auto"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
+      We engineer web solutions that are fast, secure, and infinitely scalable.
+      Beyond code, we build digital experiences that define your brand's future.
+    </p>
+  </div>
+</section>

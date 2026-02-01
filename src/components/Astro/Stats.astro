@@ -1,0 +1,100 @@
+---
+import {
+  Code2,
+  Coffee,
+  Clock,
+  Users,
+  TrendingUp,
+  CheckCircle2,
+} from "lucide-react";
+---
+
+<section class="py-24 bg-brand-dark relative overflow-hidden">
+  <!-- Animated Grid Background -->
+  <div class="absolute inset-0 tech-grid opacity-30"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-brand-secondary font-bold tracking-widest uppercase mb-4">
+        Live Stats
+      </h2>
+      <h3 class="text-3xl md:text-5xl font-black text-white">
+        Real-Time Credibility
+      </h3>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      {
+        [
+          {
+            label: "Lines of Code",
+            value: "500K+",
+            icon: Code2,
+            color: "cyan",
+            delay: 0,
+          },
+          {
+            label: "Cups of Coffee",
+            value: "2,847",
+            icon: Coffee,
+            color: "orange",
+            delay: 50,
+          },
+          {
+            label: "Dev Hours",
+            value: "10K+",
+            icon: Clock,
+            color: "purple",
+            delay: 100,
+          },
+          {
+            label: "Happy Clients",
+            value: "30+",
+            icon: Users,
+            color: "green",
+            delay: 150,
+          },
+          {
+            label: "Projects Done",
+            value: "50+",
+            icon: TrendingUp,
+            color: "blue",
+            delay: 200,
+          },
+          {
+            label: "Success Rate",
+            value: "100%",
+            icon: CheckCircle2,
+            color: "emerald",
+            delay: 250,
+          },
+        ].map((stat) => (
+          <div
+            data-aos="zoom-in"
+            data-aos-delay={stat.delay}
+            class="group relative p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-brand-primary/50 transition-all hover:-translate-y-2 glow-card"
+          >
+            {/* Gradient Glow Background */}
+            <div
+              class={`absolute inset-0 bg-gradient-to-br from-${stat.color}-500/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none`}
+            />
+
+            <div class="relative z-10 text-center">
+              <div
+                class={`flex justify-center mb-3 text-${stat.color}-400 group-hover:scale-110 transition-transform`}
+              >
+                <stat.icon className="w-8 h-8" />
+              </div>
+              <div class="text-3xl md:text-4xl font-black text-white mb-1 tracking-tight">
+                {stat.value}
+              </div>
+              <div class="text-brand-secondary text-xs font-semibold uppercase tracking-wider">
+                {stat.label}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

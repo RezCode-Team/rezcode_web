@@ -1,0 +1,235 @@
+---
+import {
+  Atom,
+  Rocket,
+  Wind,
+  Server,
+  FileCode,
+  Braces,
+  Database,
+  Globe,
+  Layout,
+  Cpu,
+  PenTool,
+  GitBranch,
+} from "lucide-react";
+---
+
+<section class="py-24 bg-brand-dark relative border-t border-brand-primary/10">
+  <!-- Subtle Grid Background -->
+  <div
+    class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,black,transparent)] pointer-events-none"
+  >
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-brand-secondary font-bold tracking-widest uppercase mb-4">
+        The Arsenal
+      </h2>
+      <h3 class="text-3xl md:text-5xl font-black text-white">
+        Technology Stack
+      </h3>
+      <p class="text-brand-light/60 mt-4 max-w-2xl mx-auto">
+        Battle-tested tools and frameworks that power next-generation web
+        experiences.
+      </p>
+    </div>
+
+    <!-- Tech Categories Grid -->
+    <div class="grid md:grid-cols-4 gap-8">
+      <!-- Core -->
+      <div
+        data-aos="fade-up"
+        data-aos-delay="0"
+        class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl"
+      >
+        <div class="flex items-center gap-3 mb-6">
+          <div
+            class="w-10 h-10 rounded-xl bg-cyan-500/20 flex items-center justify-center text-cyan-400"
+          >
+            <Layout className="w-5 h-5" />
+          </div>
+          <h4 class="text-xl font-bold text-white">Core</h4>
+        </div>
+        <p class="text-sm text-brand-secondary mb-6">
+          The foundation of every project we build.
+        </p>
+        <div class="space-y-4">
+          <div class="flex items-center gap-4 group">
+            <div
+              class="w-12 h-12 rounded-xl bg-brand-dark border border-white/10 flex items-center justify-center text-orange-400 group-hover:scale-110 transition-transform"
+            >
+              <Rocket className="w-6 h-6" />
+            </div>
+            <div>
+              <div class="font-bold text-white">Astro</div>
+              <div class="text-xs text-brand-secondary">
+                Ultra-Fast Static Sites
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 group">
+            <div
+              class="w-12 h-12 rounded-xl bg-brand-dark border border-white/10 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform"
+            >
+              <Atom className="w-6 h-6" />
+            </div>
+            <div>
+              <div class="font-bold text-white">React 19</div>
+              <div class="text-xs text-brand-secondary">
+                Modern UI Framework
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 group">
+            <div
+              class="w-12 h-12 rounded-xl bg-brand-dark border border-white/10 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform"
+            >
+              <Braces className="w-6 h-6" />
+            </div>
+            <div>
+              <div class="font-bold text-white">TypeScript</div>
+              <div class="text-xs text-brand-secondary">
+                Type-Safe Development
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Style -->
+      <div
+        data-aos="fade-up"
+        data-aos-delay="100"
+        class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl"
+      >
+        <div class="flex items-center gap-3 mb-6">
+          <div
+            class="w-10 h-10 rounded-xl bg-teal-500/20 flex items-center justify-center text-teal-400"
+          >
+            <PenTool className="w-5 h-5" />
+          </div>
+          <h4 class="text-xl font-bold text-white">Style</h4>
+        </div>
+        <p class="text-sm text-brand-secondary mb-6">
+          Design systems that bring interfaces to life.
+        </p>
+        <div class="space-y-4">
+          <div class="flex items-center gap-4 group">
+            <div
+              class="w-12 h-12 rounded-xl bg-brand-dark border border-white/10 flex items-center justify-center text-teal-400 group-hover:scale-110 transition-transform"
+            >
+              <Wind className="w-6 h-6" />
+            </div>
+            <div>
+              <div class="font-bold text-white">Tailwind CSS v4</div>
+              <div class="text-xs text-brand-secondary">
+                Utility-First Design
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 group">
+            <div
+              class="w-12 h-12 rounded-xl bg-brand-dark border border-white/10 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform"
+            >
+              <Cpu className="w-6 h-6" />
+            </div>
+            <div>
+              <div class="font-bold text-white">Framer Motion</div>
+              <div class="text-xs text-brand-secondary">Fluid Animations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div
+        data-aos="fade-up"
+        data-aos-delay="200"
+        class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl"
+      >
+        <div class="flex items-center gap-3 mb-6">
+          <div
+            class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400"
+          >
+            <GitBranch className="w-5 h-5" />
+          </div>
+          <h4 class="text-xl font-bold text-white">Tools</h4>
+        </div>
+        <p class="text-sm text-brand-secondary mb-6">
+          Professional workflow and deployment.
+        </p>
+        <div class="space-y-4">
+          <div class="flex items-center gap-4 group">
+            <div
+              class="w-12 h-12 rounded-xl bg-brand-dark border border-white/10 flex items-center justify-center text-red-400 group-hover:scale-110 transition-transform"
+            >
+              <GitBranch className="w-6 h-6" />
+            </div>
+            <div>
+              <div class="font-bold text-white">GitHub</div>
+              <div class="text-xs text-brand-secondary">Version Control</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 group">
+            <div
+              class="w-12 h-12 rounded-xl bg-brand-dark border border-white/10 flex items-center justify-center text-white group-hover:scale-110 transition-transform"
+            >
+              <Globe className="w-6 h-6" />
+            </div>
+            <div>
+              <div class="font-bold text-white">Vercel</div>
+              <div class="text-xs text-brand-secondary">Edge Deployment</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Database -->
+      <div
+        data-aos="fade-up"
+        data-aos-delay="300"
+        class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl"
+      >
+        <div class="flex items-center gap-3 mb-6">
+          <div
+            class="w-10 h-10 rounded-xl bg-green-500/20 flex items-center justify-center text-green-400"
+          >
+            <Database className="w-5 h-5" />
+          </div>
+          <h4 class="text-xl font-bold text-white">Database</h4>
+        </div>
+        <p class="text-sm text-brand-secondary mb-6">
+          Scalable data storage solutions.
+        </p>
+        <div class="space-y-4">
+          <div class="flex items-center gap-4 group">
+            <div
+              class="w-12 h-12 rounded-xl bg-brand-dark border border-white/10 flex items-center justify-center text-green-400 group-hover:scale-110 transition-transform"
+            >
+              <Database className="w-6 h-6" />
+            </div>
+            <div>
+              <div class="font-bold text-white">MongoDB</div>
+              <div class="text-xs text-brand-secondary">NoSQL Database</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 group">
+            <div
+              class="w-12 h-12 rounded-xl bg-brand-dark border border-white/10 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform"
+            >
+              <Server className="w-6 h-6" />
+            </div>
+            <div>
+              <div class="font-bold text-white">PostgreSQL</div>
+              <div class="text-xs text-brand-secondary">
+                Relational Database
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,11 +1,29 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import MainLayout from "../layouts/MainLayout.astro";
+import Navbar from "../components/React/Navbar.jsx";
+import Hero from "../components/Astro/Hero.astro";
+import About from "../components/Astro/About.astro";
+import Stats from "../components/Astro/Stats.astro";
+import Services from "../components/Astro/Services.astro";
+import Showcase from "../components/Astro/Showcase.astro";
+import TechStack from "../components/Astro/TechStack.astro";
+import Workflow from "../components/Astro/Workflow.astro";
+import Founder from "../components/Astro/Founder.astro";
+import Contact from "../components/Astro/Contact.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout title="The Future of Software">
+  <Navbar client:load />
+
+  <main class="relative overflow-hidden">
+    <Hero />
+    <About />
+    <Stats />
+    <Services />
+    <Showcase />
+    <TechStack />
+    <Workflow />
+    <Founder />
+    <Contact />
+  </main>
+</MainLayout>

@@ -1,0 +1,68 @@
+---
+// src/layouts/MainLayout.astro
+const { title } = Astro.props;
+
+// Tambahkan ?inline atau pastikan path benar
+// Di Astro 5 + Tailwind v4, cukup import seperti biasa tapi pastikan file global.css sudah benar
+import "../styles/global.css";
+import "aos/dist/aos.css";
+---
+
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="RezCode - Digital Engineering for Future Business"
+    />
+    <meta name="author" content="RezCode" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-brand-dark text-brand-light min-h-screen selection:bg-brand-primary selection:text-white"
+  >
+    <slot />
+
+    <script>
+      import AOS from "aos";
+
+      // Initialize AOS with elegant defaults
+      AOS.init({
+        duration: 800, // Slightly faster for a snappier feel
+        easing: "ease-out-cubic", // Elegant easing
+        once: false, // Animations repeat on scroll
+        mirror: true, // Animations happen on scroll back up
+        offset: 50, // Trigger sooner
+        delay: 50,
+      });
+      // Click Ripple Effect
+      document.addEventListener("click", (e) => {
+        const ripple = document.createElement("div");
+        ripple.classList.add("ripple");
+
+        const size = 100; // Size of the ripple
+        ripple.style.width = `${size}px`;
+        ripple.style.height = `${size}px`;
+        ripple.style.left = `${e.clientX - size / 2}px`;
+        ripple.style.top = `${e.clientY - size / 2}px`;
+
+        document.body.appendChild(ripple);
+
+        // Remove after animation
+        setTimeout(() => {
+          ripple.remove();
+        }, 800);
+      });
+    </script>
+  </body>
+</html>

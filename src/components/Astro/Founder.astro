@@ -1,0 +1,436 @@
+---
+import {
+  Github,
+  Linkedin,
+  Instagram,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+---
+
+<section
+  id="team"
+  class="py-24 bg-brand-dark relative border-t border-brand-primary/10"
+>
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-brand-secondary font-bold tracking-widest uppercase mb-4">
+        Meet The Team
+      </h2>
+      <h3 class="text-3xl md:text-5xl font-black text-white">The Architects</h3>
+      <p class="text-brand-light/60 mt-4 max-w-2xl mx-auto">
+        Passionate engineers obsessed with performance and futuristic design.
+      </p>
+    </div>
+
+    <!-- Slider Container -->
+    <div class="relative" style="perspective: 1500px;">
+      <!-- Left Fade Overlay -->
+      <div
+        class="hidden md:block absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-brand-dark via-brand-dark/80 to-transparent z-10 pointer-events-none"
+      >
+      </div>
+
+      <!-- Right Fade Overlay -->
+      <div
+        class="hidden md:block absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-brand-dark via-brand-dark/80 to-transparent z-10 pointer-events-none"
+      >
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button
+        id="team-prev"
+        class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-12 h-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-brand-primary hover:border-brand-primary hover:scale-110 transition-all duration-300 text-white group"
+      >
+        <ChevronLeft className="w-6 h-6 group-hover:animate-pulse" />
+      </button>
+
+      <button
+        id="team-next"
+        class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-12 h-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-brand-primary hover:border-brand-primary hover:scale-110 transition-all duration-300 text-white group"
+      >
+        <ChevronRight className="w-6 h-6 group-hover:animate-pulse" />
+      </button>
+
+      <!-- Team Slider -->
+      <div
+        id="team-slider"
+        class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide py-12 scroll-smooth"
+        style="transform-style: preserve-3d;"
+      >
+        <!-- Team Member 1 - Founder -->
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="0"
+          class="min-w-full flex-shrink-0 snap-start group relative p-8 mx-4 md:mx-8 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-brand-primary/50 transition-all duration-200 glow-card card-3d"
+          style="transform-style: preserve-3d;"
+        >
+          <div
+            class="absolute inset-0 bg-brand-primary/5 rounded-3xl blur-3xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          >
+          </div>
+
+          <div class="relative">
+            <!-- Profile Image -->
+            <div
+              class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-brand-primary/20 group-hover:border-brand-primary group-hover:scale-110 transition-all duration-500 mb-6 bg-brand-dark flex items-center justify-center group-hover:shadow-lg group-hover:shadow-brand-primary/50"
+            >
+              <div
+                class="text-brand-primary font-bold text-4xl group-hover:scale-110 transition-transform duration-300"
+              >
+                FR
+              </div>
+            </div>
+
+            <!-- Info -->
+            <div class="text-center">
+              <div
+                class="text-xs text-brand-secondary mb-2 font-semibold uppercase animate-fade-in"
+              >
+                Founder & Lead Engineer
+              </div>
+              <h4
+                class="text-2xl font-black text-white mb-3 group-hover:text-brand-primary transition-colors duration-300"
+              >
+                Farell Rhezky Alvianto
+              </h4>
+              <p class="text-brand-light/80 leading-relaxed mb-6 text-sm">
+                Full-stack engineer obsessed with performance and futuristic
+                design. 4+ years crafting digital experiences.
+              </p>
+
+              <div class="flex items-center justify-center gap-3">
+                <a
+                  href="#"
+                  class="p-2 rounded-xl bg-white/5 border border-white/10 hover:bg-brand-primary hover:text-white hover:scale-110 transition-all duration-300 hover:-translate-y-1 hover:rotate-6"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
+                <a
+                  href="#"
+                  class="p-2 rounded-xl bg-white/5 border border-white/10 hover:bg-brand-primary hover:text-white hover:scale-110 transition-all duration-300 hover:-translate-y-1 hover:rotate-6"
+                >
+                  <Github className="w-4 h-4" />
+                </a>
+                <a
+                  href="#"
+                  class="p-2 rounded-xl bg-white/5 border border-white/10 hover:bg-brand-primary hover:text-white hover:scale-110 transition-all duration-300 hover:-translate-y-1 hover:rotate-6"
+                >
+                  <Instagram className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 2 - Backend Engineer -->
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          class="min-w-full flex-shrink-0 snap-start group relative p-8 mx-4 md:mx-8 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-brand-secondary/50 transition-all duration-200 glow-card card-3d"
+          style="transform-style: preserve-3d;"
+        >
+          <div
+            class="absolute inset-0 bg-brand-secondary/5 rounded-3xl blur-3xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          >
+          </div>
+
+          <div class="relative">
+            <div
+              class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-brand-secondary/20 group-hover:border-brand-secondary group-hover:scale-110 transition-all duration-500 mb-6 bg-brand-dark flex items-center justify-center group-hover:shadow-lg group-hover:shadow-brand-secondary/50"
+            >
+              <div
+                class="text-brand-secondary font-bold text-4xl group-hover:scale-110 transition-transform duration-300"
+              >
+                BE
+              </div>
+            </div>
+
+            <div class="text-center">
+              <div
+                class="text-xs text-brand-secondary mb-2 font-semibold uppercase"
+              >
+                Backend Engineer
+              </div>
+              <h4
+                class="text-2xl font-black text-white mb-3 group-hover:text-brand-secondary transition-colors duration-300"
+              >
+                Backend Specialist
+              </h4>
+              <p class="text-brand-light/80 leading-relaxed mb-6 text-sm">
+                API architect specializing in scalable systems and database
+                optimization.
+              </p>
+
+              <div class="flex items-center justify-center gap-3">
+                <a
+                  href="#"
+                  class="p-2 rounded-xl bg-white/5 border border-white/10 hover:bg-brand-secondary hover:text-white hover:scale-110 transition-all duration-300 hover:-translate-y-1 hover:rotate-6"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
+                <a
+                  href="#"
+                  class="p-2 rounded-xl bg-white/5 border border-white/10 hover:bg-brand-secondary hover:text-white hover:scale-110 transition-all duration-300 hover:-translate-y-1 hover:rotate-6"
+                >
+                  <Github className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 3 - UI/UX Designer -->
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          class="min-w-full flex-shrink-0 snap-start group relative p-8 mx-4 md:mx-8 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple-500/50 transition-all duration-200 glow-card card-3d"
+          style="transform-style: preserve-3d;"
+        >
+          <div
+            class="absolute inset-0 bg-purple-500/5 rounded-3xl blur-3xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          >
+          </div>
+
+          <div class="relative">
+            <div
+              class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-purple-500/20 group-hover:border-purple-500 group-hover:scale-110 transition-all duration-500 mb-6 bg-brand-dark flex items-center justify-center group-hover:shadow-lg group-hover:shadow-purple-500/50"
+            >
+              <div
+                class="text-purple-400 font-bold text-4xl group-hover:scale-110 transition-transform duration-300"
+              >
+                UI
+              </div>
+            </div>
+
+            <div class="text-center">
+              <div
+                class="text-xs text-brand-secondary mb-2 font-semibold uppercase"
+              >
+                UI/UX Designer
+              </div>
+              <h4
+                class="text-2xl font-black text-white mb-3 group-hover:text-purple-400 transition-colors duration-300"
+              >
+                Design Lead
+              </h4>
+              <p class="text-brand-light/80 leading-relaxed mb-6 text-sm">
+                Crafting intuitive interfaces with a focus on user experience
+                and visual storytelling.
+              </p>
+
+              <div class="flex items-center justify-center gap-3">
+                <a
+                  href="#"
+                  class="p-2 rounded-xl bg-white/5 border border-white/10 hover:bg-purple-500 hover:text-white hover:scale-110 transition-all duration-300 hover:-translate-y-1 hover:rotate-6"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
+                <a
+                  href="#"
+                  class="p-2 rounded-xl bg-white/5 border border-white/10 hover:bg-purple-500 hover:text-white hover:scale-110 transition-all duration-300 hover:-translate-y-1 hover:rotate-6"
+                >
+                  <Instagram className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 4 - DevOps -->
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="250"
+          class="min-w-full flex-shrink-0 snap-start group relative p-8 mx-4 md:mx-8 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-emerald-500/50 transition-all duration-200 glow-card card-3d"
+          style="transform-style: preserve-3d;"
+        >
+          <div
+            class="absolute inset-0 bg-emerald-500/5 rounded-3xl blur-3xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          >
+          </div>
+
+          <div class="relative">
+            <div
+              class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-emerald-500/20 group-hover:border-emerald-500 group-hover:scale-110 transition-all duration-500 mb-6 bg-brand-dark flex items-center justify-center group-hover:shadow-lg group-hover:shadow-emerald-500/50"
+            >
+              <div
+                class="text-emerald-400 font-bold text-4xl group-hover:scale-110 transition-transform duration-300"
+              >
+                DO
+              </div>
+            </div>
+
+            <div class="text-center">
+              <div
+                class="text-xs text-brand-secondary mb-2 font-semibold uppercase"
+              >
+                DevOps Engineer
+              </div>
+              <h4
+                class="text-2xl font-black text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300"
+              >
+                Infrastructure Expert
+              </h4>
+              <p class="text-brand-light/80 leading-relaxed mb-6 text-sm">
+                Ensuring seamless deployments and 99.9% uptime through robust
+                CI/CD pipelines.
+              </p>
+
+              <div class="flex items-center justify-center gap-3">
+                <a
+                  href="#"
+                  class="p-2 rounded-xl bg-white/5 border border-white/10 hover:bg-emerald-500 hover:text-white hover:scale-110 transition-all duration-300 hover:-translate-y-1 hover:rotate-6"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
+                <a
+                  href="#"
+                  class="p-2 rounded-xl bg-white/5 border border-white/10 hover:bg-emerald-500 hover:text-white hover:scale-110 transition-all duration-300 hover:-translate-y-1 hover:rotate-6"
+                >
+                  <Github className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicators -->
+      <div class="flex justify-center gap-2 mt-8" id="team-dots">
+        <div
+          class="w-2 h-2 rounded-full bg-brand-primary transition-all duration-300"
+        >
+        </div>
+        <div
+          class="w-2 h-2 rounded-full bg-white/20 transition-all duration-300"
+        >
+        </div>
+        <div
+          class="w-2 h-2 rounded-full bg-white/20 transition-all duration-300"
+        >
+        </div>
+        <div
+          class="w-2 h-2 rounded-full bg-white/20 transition-all duration-300"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const teamSlider = document.getElementById("team-slider");
+  const teamPrevBtn = document.getElementById("team-prev");
+  const teamNextBtn = document.getElementById("team-next");
+  const teamDots = document.querySelectorAll("#team-dots div");
+
+  let teamAutoPlayInterval: ReturnType<typeof setInterval> | undefined;
+  let isTeamUserInteracting = false;
+
+  if (teamSlider && teamPrevBtn && teamNextBtn) {
+    // Navigation buttons
+    teamPrevBtn.addEventListener("click", () => {
+      isTeamUserInteracting = true;
+      const scrollAmount = teamSlider.clientWidth;
+      teamSlider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      resetTeamAutoPlay();
+    });
+
+    teamNextBtn.addEventListener("click", () => {
+      isTeamUserInteracting = true;
+      const scrollAmount = teamSlider.clientWidth;
+      teamSlider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      resetTeamAutoPlay();
+    });
+
+    // Auto-play functionality
+    function startTeamAutoPlay() {
+      teamAutoPlayInterval = setInterval(() => {
+        if (!isTeamUserInteracting && teamSlider) {
+          const maxScroll = teamSlider.scrollWidth - teamSlider.clientWidth;
+          const currentScroll = teamSlider.scrollLeft;
+
+          if (currentScroll >= maxScroll - 10) {
+            // Reset to beginning
+            teamSlider.scrollTo({ left: 0, behavior: "smooth" });
+          } else {
+            const scrollAmount = teamSlider.clientWidth;
+            teamSlider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+          }
+        }
+      }, 5000); // Auto-slide every 5 seconds
+    }
+
+    function resetTeamAutoPlay() {
+      if (teamAutoPlayInterval) {
+        clearInterval(teamAutoPlayInterval);
+      }
+      setTimeout(() => {
+        isTeamUserInteracting = false;
+        startTeamAutoPlay();
+      }, 8000); // Resume auto-play after 8 seconds of inactivity
+    }
+
+    // Pause on hover
+    teamSlider.addEventListener("mouseenter", () => {
+      isTeamUserInteracting = true;
+    });
+
+    teamSlider.addEventListener("mouseleave", () => {
+      isTeamUserInteracting = false;
+    });
+
+    // Start auto-play on load
+    startTeamAutoPlay();
+
+    // Update dots based on scroll position
+    teamSlider.addEventListener("scroll", () => {
+      const scrollLeft = teamSlider.scrollLeft;
+      const cardWidth = teamSlider.clientWidth;
+      const activeIndex = Math.round(scrollLeft / cardWidth);
+
+      teamDots.forEach((dot, index) => {
+        if (index === activeIndex) {
+          dot.classList.remove("bg-white/20", "w-2");
+          dot.classList.add("bg-brand-primary", "w-8");
+        } else {
+          dot.classList.remove("bg-brand-primary", "w-8");
+          dot.classList.add("bg-white/20", "w-2");
+        }
+      });
+    });
+  }
+</script>
+
+<style>
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-in;
+  }
+
+  .card-3d {
+    transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .card-3d:hover {
+    transform: translateY(-12px) scale(1.02) !important;
+    z-index: 50;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+</style>

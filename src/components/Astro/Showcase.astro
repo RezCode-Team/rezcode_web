@@ -1,0 +1,540 @@
+---
+import { ChevronLeft, ChevronRight, TrendingUp } from "lucide-react";
+---
+
+<section id="projects" class="py-24 bg-brand-dark relative overflow-visible">
+  <!-- Grid Background -->
+  <div
+    class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,black,transparent)] pointer-events-none"
+  >
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-brand-secondary font-bold tracking-widest uppercase mb-4">
+        Selected Missions
+      </h2>
+      <h3 class="text-3xl md:text-5xl font-black text-white">
+        Proven Track Record
+      </h3>
+      <p class="text-brand-light/60 mt-4 max-w-2xl mx-auto">
+        Real projects, real results. Our portfolio showcases cutting-edge
+        solutions delivered to satisfied clients.
+      </p>
+    </div>
+
+    <!-- Slider Container -->
+    <div class="relative" style="perspective: 1500px;">
+      <!-- Left Fade Overlay -->
+      <div
+        class="hidden md:block absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-brand-dark via-brand-dark/80 to-transparent z-10 pointer-events-none"
+      >
+      </div>
+
+      <!-- Right Fade Overlay -->
+      <div
+        class="hidden md:block absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-brand-dark via-brand-dark/80 to-transparent z-10 pointer-events-none"
+      >
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button
+        id="project-prev"
+        class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-12 h-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-brand-primary hover:border-brand-primary hover:scale-110 transition-all duration-300 text-white group"
+      >
+        <ChevronLeft className="w-6 h-6 group-hover:animate-pulse" />
+      </button>
+
+      <button
+        id="project-next"
+        class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-12 h-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-brand-primary hover:border-brand-primary hover:scale-110 transition-all duration-300 text-white group"
+      >
+        <ChevronRight className="w-6 h-6 group-hover:animate-pulse" />
+      </button>
+
+      <!-- Slider -->
+      <div
+        id="project-slider"
+        class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide py-8 scroll-smooth px-4 gap-6"
+        style="transform-style: preserve-3d;"
+      >
+        <!-- Project 1 -->
+        <div
+          data-aos="fade-up"
+          data-aos-delay="0"
+          class="project-card flex-none w-80 snap-center group relative rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-brand-primary/50 transition-all duration-300 overflow-hidden shadow-xl"
+        >
+          <!-- Gradient Header -->
+          <div class="relative h-48 overflow-hidden">
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-brand-primary to-cyan-600 flex items-center justify-center"
+            >
+              <div class="text-6xl opacity-20">💼</div>
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60"
+            >
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <div
+                class="text-xs text-brand-secondary mb-2 font-semibold uppercase tracking-wider"
+              >
+                TechCorp Indonesia
+              </div>
+              <h4 class="text-2xl font-black">NexusCommerce Platform</h4>
+            </div>
+            <span
+              class="absolute top-4 right-4 px-3 py-1 text-xs font-bold bg-green-500 text-white rounded-full"
+              >Featured</span
+            >
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <p class="text-brand-light/70 mb-4 text-sm leading-relaxed">
+              Full-stack e-commerce solution with real-time inventory management
+              and AI-powered recommendations.
+            </p>
+
+            <!-- Tech Stack -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-cyan-500/20 text-cyan-400 rounded-lg border border-cyan-500/30"
+                >React</span
+              >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-green-500/20 text-green-400 rounded-lg border border-green-500/30"
+                >Node.js</span
+              >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-teal-500/20 text-teal-400 rounded-lg border border-teal-500/30"
+                >Tailwind</span
+              >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-blue-500/20 text-blue-400 rounded-lg border border-blue-500/30"
+                >MongoDB</span
+              >
+            </div>
+
+            <!-- Result -->
+            <div
+              class="flex items-center gap-2 text-green-400 font-bold text-sm mb-4"
+            >
+              <TrendingUp className="w-4 h-4" />
+              <span>40% faster, 3x conversion</span>
+            </div>
+
+            <!-- CTA Button -->
+            <button
+              class="w-full bg-gradient-to-r from-brand-primary to-cyan-600 text-white px-4 py-2.5 rounded-lg hover:shadow-lg hover:shadow-brand-primary/50 transition-all duration-300 flex items-center justify-center font-semibold"
+            >
+              <span>View Project</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div
+          data-aos="fade-up"
+          data-aos-delay="100"
+          class="project-card flex-none w-80 snap-center group relative rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-brand-secondary/50 transition-all duration-300 overflow-hidden shadow-xl"
+        >
+          <!-- Gradient Header -->
+          <div class="relative h-48 overflow-hidden">
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-brand-secondary to-purple-600 flex items-center justify-center"
+            >
+              <div class="text-6xl opacity-20">📊</div>
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60"
+            >
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <div
+                class="text-xs text-brand-secondary mb-2 font-semibold uppercase tracking-wider"
+              >
+                Edusync Solutions
+              </div>
+              <h4 class="text-2xl font-black">Dashboard Analytics Pro</h4>
+            </div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <p class="text-brand-light/70 mb-4 text-sm leading-relaxed">
+              Real-time business intelligence dashboard with custom reporting
+              and data visualization.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-orange-500/20 text-orange-400 rounded-lg border border-orange-500/30"
+                >Astro</span
+              >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-purple-500/20 text-purple-400 rounded-lg border border-purple-500/30"
+                >TypeScript</span
+              >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-cyan-500/20 text-cyan-400 rounded-lg border border-cyan-500/30"
+                >Tailwind</span
+              >
+            </div>
+
+            <div
+              class="flex items-center gap-2 text-green-400 font-bold text-sm mb-4"
+            >
+              <TrendingUp className="w-4 h-4" />
+              <span>50% cost reduction</span>
+            </div>
+
+            <button
+              class="w-full bg-gradient-to-r from-brand-secondary to-purple-600 text-white px-4 py-2.5 rounded-lg hover:shadow-lg hover:shadow-brand-secondary/50 transition-all duration-300 flex items-center justify-center font-semibold"
+            >
+              <span>View Project</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          class="project-card flex-none w-80 snap-center group relative rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 overflow-hidden shadow-xl"
+        >
+          <!-- Gradient Header -->
+          <div class="relative h-48 overflow-hidden">
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center"
+            >
+              <div class="text-6xl opacity-20">🎓</div>
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60"
+            >
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <div
+                class="text-xs text-brand-secondary mb-2 font-semibold uppercase tracking-wider"
+              >
+                Edusync Solutions
+              </div>
+              <h4 class="text-2xl font-black">Learning Hub PWA</h4>
+            </div>
+            <span
+              class="absolute top-4 right-4 px-3 py-1 text-xs font-bold bg-purple-500 text-white rounded-full"
+              >Popular</span
+            >
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <p class="text-brand-light/70 mb-4 text-sm leading-relaxed">
+              Progressive Web App for online learning with offline mode and
+              real-time collaboration.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-cyan-500/20 text-cyan-400 rounded-lg border border-cyan-500/30"
+                >React</span
+              >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-yellow-500/20 text-yellow-400 rounded-lg border border-yellow-500/30"
+                >Python</span
+              >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-purple-500/20 text-purple-400 rounded-lg border border-purple-500/30"
+                >Node.js</span
+              >
+            </div>
+
+            <div
+              class="flex items-center gap-2 text-green-400 font-bold text-sm mb-4"
+            >
+              <TrendingUp className="w-4 h-4" />
+              <span>95% uptime achieved</span>
+            </div>
+
+            <button
+              class="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2.5 rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 flex items-center justify-center font-semibold"
+            >
+              <span>View Project</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div
+          data-aos="fade-up"
+          data-aos-delay="300"
+          class="project-card flex-none w-80 snap-center group relative rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-emerald-500/50 transition-all duration-300 overflow-hidden shadow-xl"
+        >
+          <!-- Gradient Header -->
+          <div class="relative h-48 overflow-hidden">
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center"
+            >
+              <div class="text-6xl opacity-20">🏥</div>
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60"
+            >
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <div
+                class="text-xs text-brand-secondary mb-2 font-semibold uppercase tracking-wider"
+              >
+                HealthTech Global
+              </div>
+              <h4 class="text-2xl font-black">Patient Portal System</h4>
+            </div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <p class="text-brand-light/70 mb-4 text-sm leading-relaxed">
+              Secure healthcare platform for patient records, appointments, and
+              telemedicine consultations.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-green-500/20 text-green-400 rounded-lg border border-green-500/30"
+                >Vue.js</span
+              >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-emerald-500/20 text-emerald-400 rounded-lg border border-emerald-500/30"
+                >Laravel</span
+              >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-teal-500/20 text-teal-400 rounded-lg border border-teal-500/30"
+                >MySQL</span
+              >
+            </div>
+
+            <div
+              class="flex items-center gap-2 text-green-400 font-bold text-sm mb-4"
+            >
+              <TrendingUp className="w-4 h-4" />
+              <span>10k+ active users</span>
+            </div>
+
+            <button
+              class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-4 py-2.5 rounded-lg hover:shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 flex items-center justify-center font-semibold"
+            >
+              <span>View Project</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicators -->
+      <div class="flex justify-center gap-2 mt-8" id="project-dots">
+        <div
+          class="w-2 h-2 rounded-full bg-brand-primary transition-all duration-300"
+        >
+        </div>
+        <div
+          class="w-2 h-2 rounded-full bg-white/20 transition-all duration-300"
+        >
+        </div>
+        <div
+          class="w-2 h-2 rounded-full bg-white/20 transition-all duration-300"
+        >
+        </div>
+        <div
+          class="w-2 h-2 rounded-full bg-white/20 transition-all duration-300"
+        >
+        </div>
+        <div
+          class="w-2 h-2 rounded-full bg-white/20 transition-all duration-300"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const slider = document.getElementById("project-slider");
+  const prevBtn = document.getElementById("project-prev");
+  const nextBtn = document.getElementById("project-next");
+  const dots = document.querySelectorAll("#project-dots div");
+  const projectCards = document.querySelectorAll(".project-card");
+
+  let autoPlayInterval: ReturnType<typeof setInterval> | undefined;
+  let isUserInteracting = false;
+
+  // Sophisticated card hover effect - dim others when one is hovered
+  projectCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      projectCards.forEach((c) => {
+        if (c !== card) {
+          c.style.opacity = "0.5";
+          c.style.transform = "scale(0.95)";
+        }
+      });
+    });
+
+    card.addEventListener("mouseleave", () => {
+      projectCards.forEach((c) => {
+        c.style.opacity = "1";
+        c.style.transform = "";
+      });
+    });
+  });
+
+  if (slider && prevBtn && nextBtn) {
+    const cardWidth = 320 + 24; // w-80 = 320px + gap-6 = 24px
+
+    // Navigation buttons
+    prevBtn.addEventListener("click", () => {
+      isUserInteracting = true;
+      slider.scrollBy({ left: -cardWidth, behavior: "smooth" });
+      resetAutoPlay();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      isUserInteracting = true;
+      slider.scrollBy({ left: cardWidth, behavior: "smooth" });
+      resetAutoPlay();
+    });
+
+    // Auto-play functionality
+    function startAutoPlay() {
+      autoPlayInterval = setInterval(() => {
+        if (!isUserInteracting && slider) {
+          const maxScroll = slider.scrollWidth - slider.clientWidth;
+          const currentScroll = slider.scrollLeft;
+
+          if (currentScroll >= maxScroll - 10) {
+            // Reset to beginning
+            slider.scrollTo({ left: 0, behavior: "smooth" });
+          } else {
+            slider.scrollBy({ left: cardWidth, behavior: "smooth" });
+          }
+        }
+      }, 4000); // Auto-slide every 4 seconds
+    }
+
+    function resetAutoPlay() {
+      if (autoPlayInterval) {
+        clearInterval(autoPlayInterval);
+      }
+      setTimeout(() => {
+        isUserInteracting = false;
+        startAutoPlay();
+      }, 8000); // Resume auto-play after 8 seconds of inactivity
+    }
+
+    // Pause on hover
+    slider.addEventListener("mouseenter", () => {
+      isUserInteracting = true;
+    });
+
+    slider.addEventListener("mouseleave", () => {
+      isUserInteracting = false;
+    });
+
+    // Start auto-play on load
+    startAutoPlay();
+
+    // Update dots based on scroll position
+    slider.addEventListener("scroll", () => {
+      const scrollLeft = slider.scrollLeft;
+      const activeIndex = Math.round(scrollLeft / cardWidth);
+
+      dots.forEach((dot, index) => {
+        if (index === activeIndex) {
+          dot.classList.remove("bg-white/20", "w-2");
+          dot.classList.add("bg-brand-primary", "w-8");
+        } else {
+          dot.classList.remove("bg-brand-primary", "w-8");
+          dot.classList.add("bg-white/20", "w-2");
+        }
+      });
+    });
+  }
+</script>
+
+<style>
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-in;
+  }
+
+  .project-card {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+</style>
