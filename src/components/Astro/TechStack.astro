@@ -1,120 +1,106 @@
 ---
+/**
+ * TECH STACK - ULTRA CLEAN VERSION
+ * Portofolio: FARELL RHEZKY ALVIANTO
+ */
 import {
-  Atom,
-  Rocket,
-  Wind,
-  Server,
-  Braces,
-  Database,
-  Globe,
-  Layout,
-  Cpu,
-  PenTool,
-  GitBranch,
+  Atom, Rocket, Wind, Server, Braces, Database, 
+  Globe, Layout, Cpu, PenTool, GitBranch, Terminal
 } from "lucide-react";
 import techStackData from "../../data/techstack.json";
 
 const IconMap: any = {
-  Atom,
-  Rocket,
-  Wind,
-  Server,
-  Braces,
-  Database,
-  Globe,
-  Layout,
-  Cpu,
-  PenTool,
-  GitBranch,
+  Atom, Rocket, Wind, Server, Braces, Database, 
+  Globe, Layout, Cpu, PenTool, GitBranch, Terminal
 };
 ---
 
-<section
-  class="py-24 bg-brand-dark relative border-t border-brand-primary/10 overflow-hidden"
->
-  <!-- Subtle Grid Background -->
-  <div
-    class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,black,transparent)] pointer-events-none"
-  >
-  </div>
-
+<section id="tech-stack" class="py-24 bg-[#03050a] relative overflow-hidden" aria-labelledby="tech-heading">
   <div class="max-w-7xl mx-auto px-6 relative z-10">
-    <div class="text-center mb-16">
-      <h2
-        class="text-brand-secondary font-bold tracking-widest uppercase mb-4"
-        data-aos="fade-up"
-      >
-        The Arsenal
+    
+    <header class="mb-16">
+      <h2 id="tech-heading" class="text-4xl md:text-6xl font-black text-white tracking-tighter">
+        Tech <span class="text-brand-primary italic">Stack.</span>
       </h2>
-      <div class="overflow-hidden">
-        <h3
-          class="text-3xl py-4 md:text-5xl font-black text-white animate-reveal-text"
-        >
-          Technology Stack
-        </h3>
-      </div>
-      <p
-        class="text-brand-light/60 mt-4 max-w-2xl mx-auto"
-        data-aos="fade-up"
-        data-aos-delay="100"
-      >
-        Battle-tested tools and frameworks that power next-generation web
-        experiences.
-      </p>
-    </div>
+      <div class="h-1.5 w-16 bg-brand-primary mt-4 rounded-full"></div>
+    </header>
 
-    <!-- Tech Categories Grid -->
-    <div class="grid md:grid-cols-4 gap-8">
-      {
-        techStackData.map((category, catIndex) => {
-          const CategoryIcon = IconMap[category.icon];
-          return (
-            <div
-              data-aos="fade-up"
-              data-aos-delay={catIndex * 100}
-              class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl glow-card"
-            >
-              <div class="flex items-center gap-3 mb-6">
-                <div
-                  class={`w-10 h-10 rounded-xl ${category.bgColor} flex items-center justify-center ${category.color} group-hover:scale-110 transition-transform`}
-                >
-                  <CategoryIcon className="w-5 h-5" aria-hidden="true" />
-                </div>
-                <h4 class="text-xl font-bold text-white">
-                  {category.category}
-                </h4>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {techStackData.map((category, catIndex) => {
+        const CategoryIcon = IconMap[category.icon] || Terminal;
+        
+        return (
+          <article 
+            class="tech-card group bg-[#0a0d14] border border-white/5 p-8 rounded-[2rem] hover:border-brand-primary/30 transition-all duration-300 opacity-0 translate-y-4 shadow-xl"
+            style={`transition-delay: ${catIndex * 50}ms`}
+          >
+            <div class="flex items-center gap-3 mb-10 border-b border-white/5 pb-4">
+              <div class="text-brand-primary">
+                <CategoryIcon size={18} />
               </div>
-              <p class="text-sm text-brand-secondary mb-6">
-                {category.description}
-              </p>
-              <div class="space-y-4">
-                {category.items.map((item) => {
-                  const ItemIcon = IconMap[item.icon];
-                  return (
-                    <div class="flex items-center gap-4 group">
-                      <div
-                        class={`w-12 h-12 rounded-xl bg-brand-dark border border-white/10 flex items-center justify-center ${item.color} group-hover:scale-110 group-hover:${item.bgColor} transition-all`}
-                      >
-                        <ItemIcon className="w-6 h-6" aria-hidden="true" />
-                      </div>
-                      <div>
-                        <div
-                          class={`font-bold text-white group-hover:${item.color} transition-colors`}
-                        >
-                          {item.name}
-                        </div>
-                        <div class="text-xs text-brand-secondary">
-                          {item.description}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
+              <h3 class="text-xs font-bold text-white/50 uppercase tracking-widest">{category.category}</h3>
             </div>
-          );
-        })
-      }
+
+            <div class="space-y-6">
+              {category.items.map((item) => {
+                const ItemIcon = IconMap[item.icon] || Terminal;
+                // Mengambil class warna dari JSON (contoh: text-cyan-400)
+                const techColor = item.color || "text-white";
+                
+                return (
+                  <div class="flex items-center gap-4 group/item">
+                    <div class={`w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center transition-all duration-200 group-hover/item:bg-white/10 ${techColor}`}>
+                      <ItemIcon size={20} />
+                    </div>
+                    
+                    <div>
+                      <h4 class={`text-sm font-bold transition-colors ${techColor} brightness-125`}>
+                        {item.name}
+                      </h4>
+                      <p class="text-[11px] text-white/30 font-medium">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </article>
+        );
+      })}
     </div>
   </div>
 </section>
+
+<style>
+  /* Animasi dikontrol via Intersection Observer untuk skor Lighthouse 100 */
+  .tech-card {
+    will-change: transform, opacity;
+    contain: content;
+  }
+
+  .tech-card.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hilangkan scrollbar horizontal jika ada overflow pada mobile */
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+</style>
+
+<script>
+  /**
+   * LIGHTHOUSE OPTIMIZATION
+   * Memicu animasi masuk secara cepat (snappy)
+   */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        (entry.target as HTMLElement).classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.tech-card').forEach(card => observer.observe(card));
+</script>
