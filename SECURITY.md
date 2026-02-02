@@ -17,7 +17,7 @@ We actively provide security updates for the following versions of our official 
 
 Instead, please report vulnerabilities by following these steps:
 
-1. **Private Report:** Send an email to `security@rezcode.com` (or contact **Farell Rhezky Alvianto** directly via LinkedIn).
+1. **Private Report:** Send an Dm to `@rezcode.agency`.
 2. **Details:** Include a detailed description of the vulnerability, steps to reproduce, and the potential impact.
 3. **Timeline:** - You will receive an acknowledgment of your report within **24-48 hours**.
    - We will provide status updates every **3 days** until the issue is resolved.
