@@ -60,9 +60,11 @@ import {
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
+            {/* Background Accent */}
             <div class={`h-32 bg-gradient-to-br ${member.color} opacity-80`} />
 
             <div class="relative -mt-16 px-6 pb-10 text-center">
+              {/* Profile Image / Initials */}
               <div class="w-28 h-28 mx-auto rounded-[2rem] overflow-hidden border-4 border-[#0a0d17] bg-brand-dark shadow-2xl mb-6 group-hover:scale-105 transition-transform duration-500">
                 {member.image ? (
                   <Image
@@ -73,7 +75,7 @@ import {
                     class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                   />
                 ) : (
-                  <div class="w-full h-full flex items-center justify-center text-2xl font-black text-brand-primary">
+                  <div class="w-full h-full flex items-center justify-center text-2xl font-black text-brand-primary bg-brand-primary/5">
                     {member.initials}
                   </div>
                 )}
@@ -91,6 +93,7 @@ import {
                 "{member.bio}"
               </p>
 
+              {/* Social Media Links with Popup Integration */}
               <div class="flex justify-center gap-3">
                 {[
                   { icon: Linkedin, url: member.linkedin },
@@ -101,9 +104,12 @@ import {
                     social.url && (
                       <a
                         href={social.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/5 text-white/40 hover:text-brand-primary hover:bg-brand-primary/10 transition-all"
+                        target={social.url === "#" ? "_self" : "_blank"}
+                        rel={social.url === "#" ? "" : "noopener noreferrer"}
+                        onclick={
+                          social.url === "#" ? "openComingSoonModal(event)" : ""
+                        }
+                        class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/5 text-white/40 hover:text-brand-primary hover:bg-brand-primary/10 transition-all cursor-pointer"
                       >
                         <social.icon className="w-4 h-4" />
                       </a>
@@ -129,7 +135,7 @@ import {
 </style>
 
 <script>
-  const slider = document.getElementById("team-slider");
+  const slider = document.getElementById("team-slider") as HTMLElement;
   const prev = document.getElementById("team-prev");
   const next = document.getElementById("team-next");
 

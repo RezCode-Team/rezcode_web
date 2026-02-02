@@ -1,0 +1,80 @@
+---
+// src/components/Astro/ComingSoonModal.astro
+---
+
+<div
+  id="modal-overlay"
+  class="fixed inset-0 z-[10000] hidden items-center justify-center p-4 opacity-0 transition-opacity duration-300 bg-[#0c0f19]/90 backdrop-blur-md"
+>
+  <div
+    class="glow-card bg-[#161b2c] border border-[rgba(59,101,164,0.3)] p-8 rounded-2xl max-w-sm w-full text-center relative animate-slide-reveal-up overflow-hidden"
+  >
+    <div class="absolute inset-0 opacity-10 pointer-events-none tech-grid">
+    </div>
+
+    <button
+      id="close-modal"
+      class="absolute top-4 right-4 text-[#f8fbfd]/50 hover:text-[#3b65a4] transition-colors text-2xl z-10"
+    >
+      &times;
+    </button>
+
+    <div class="mb-6 inline-block animate-float relative z-10">
+      <div
+        class="w-16 h-16 bg-[rgba(59,101,164,0.1)] rounded-full flex items-center justify-center border border-[rgba(59,101,164,0.3)] shadow-[0_0_20px_rgba(59,101,164,0.2)]"
+      >
+        <span class="text-3xl">🚀</span>
+      </div>
+    </div>
+
+    <h2
+      class="text-2xl font-bold text-[#f8fbfd] mb-3 tracking-tight relative z-10"
+    >
+      COMING SOON
+    </h2>
+
+    <p class="text-[#f8fbfd]/70 text-sm leading-relaxed mb-8 relative z-10">
+      We're currently building something amazing for <span
+        class="text-[#3b65a4] font-semibold">REZCODE</span
+      >. Stay tuned for our social media launch!
+    </p>
+
+    <button
+      id="stay-tuned-btn"
+      class="w-full bg-[#3b65a4] hover:bg-[#4080bf] text-white font-semibold py-3 rounded-xl transition-all duration-300 animate-glow-pulse relative z-10"
+    >
+      Got it!
+    </button>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("modal-overlay");
+  const closeBtn = document.getElementById("close-modal");
+  const stayTunedBtn = document.getElementById("stay-tuned-btn");
+
+  function closeModal() {
+    if (modal) {
+      modal.classList.replace("opacity-100", "opacity-0");
+      setTimeout(() => {
+        modal.classList.replace("flex", "hidden");
+      }, 300);
+    }
+  }
+
+  closeBtn?.addEventListener("click", closeModal);
+  stayTunedBtn?.addEventListener("click", closeModal);
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Global function (untuk dipanggil dari Footer/Navbar)
+  (window as any).openComingSoonModal = function (e: Event) {
+    if (e) e.preventDefault();
+    if (modal) {
+      modal.classList.replace("hidden", "flex");
+      setTimeout(() => modal.classList.add("opacity-100"), 10);
+    }
+  };
+</script>
